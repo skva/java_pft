@@ -1,0 +1,4 @@
+ru/stqa/pft/ex2/Point.java
+ ru.stqa.pft.ex2.Point
+ru/stqa/pft/ex2/Run.java
+ ru.stqa.pft.ex2.Run
