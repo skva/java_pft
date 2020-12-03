@@ -5,10 +5,11 @@ public class Run {
         Point p1 = new Point(-1,3);
         Point p2 = new Point(6,2);
 
-        System.out.println("Ща как выведу ответ " + distance(p1,p2));
+//никак не мог дать ссылку на метод, т.к. в обучении рассматривались вычисления внутри одного объекта, а здесь между двумя
+        Point p3 = new Point(1,1);
+
+        System.out.println("Расстояние между точками с координатами '" + p1.a + "," + p1.b + "' и '" + p2.a + "," + p2.b + "' = " + p3.distance(p1,p2));
     }
 
-    public static double distance (Point p1, Point p2){
-        return Math.sqrt((Math.pow((p2.a - p1.a), 2)) + (Math.pow((p2.b - p1.b), 2)));
-    }
+
 }
