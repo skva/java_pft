@@ -1,0 +1,2 @@
+ru/stqa/pft/ex2/PointTests.java
+ ru.stqa.pft.ex2.PointTests
