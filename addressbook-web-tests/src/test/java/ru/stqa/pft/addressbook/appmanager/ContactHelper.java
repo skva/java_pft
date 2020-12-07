@@ -24,4 +24,10 @@ public class ContactHelper extends HelperBase{
         type(By.name("lastname"), groupData.getLastName());
         type(By.name("nickname"), groupData.getNickName());
     }
+
+    public void modifyContact() {
+        click(By.xpath("//img[@alt='Edit']"));
+    }
+
+    public void submitContactModification() { click(By.name("update"));}
 }
