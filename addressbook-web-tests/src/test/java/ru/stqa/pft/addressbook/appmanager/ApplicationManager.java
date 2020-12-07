@@ -10,6 +10,7 @@ import java.util.concurrent.TimeUnit;
 public class ApplicationManager {
     WebDriver wd;
 
+
     private SessionHelper sessionHelper;
     private NavigationHelper navigationHelper;
     private GroupHelper groupHelper;
@@ -28,6 +29,10 @@ public class ApplicationManager {
 
     public void stop() {
         wd.quit();
+    }
+
+    public void alert() {
+        wd.switchTo().alert().accept();
     }
 
     public boolean isElementPresent(By by) {

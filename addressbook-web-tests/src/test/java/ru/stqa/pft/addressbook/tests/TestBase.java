@@ -14,8 +14,13 @@ public class TestBase {
     }
 
     @AfterMethod(alwaysRun = true)
+
+    public void alert() throws Exception {
+        app.alert();
+    }
     public void tearDown() throws Exception {
         app.stop();
     }
+
 
 }
