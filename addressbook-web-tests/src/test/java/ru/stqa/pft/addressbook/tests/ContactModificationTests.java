@@ -4,6 +4,8 @@ import org.testng.Assert;
 import org.testng.annotations.Test;
 import ru.stqa.pft.addressbook.model.ContactData;
 
+import java.util.List;
+
 
 public class ContactModificationTests extends TestBase {
 
@@ -13,14 +15,14 @@ public class ContactModificationTests extends TestBase {
             app.getContactHelper().createContact(new ContactData("test1","test1","test1","test1","test1"), true);
         }
         app.getNavigationHelper().gotoContactPage();
-        int before = app.getContactHelper().getContactCount();
-        app.getContactHelper().selectContact(before - 1);
+        List<ContactData> before = app.getContactHelper().getContactList();
+        app.getContactHelper().selectContact(before.size() - 2); //-2, т.к. считается в том числе название столбца
         app.getContactHelper().modifyContact();
         app.getContactHelper().fillContactForm(new ContactData("test2","test2","test2","test2", null), false);
         app.getContactHelper().submitContactModification();
         app.getNavigationHelper().gotoContactPage();
-        int after = app.getContactHelper().getContactCount();
-        Assert.assertEquals(after, before);
+        List<ContactData> after = app.getContactHelper().getContactList();
+        Assert.assertEquals(after.size(), before.size());
     }
 
 
