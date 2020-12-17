@@ -16,7 +16,7 @@ public class ContactModificationTests extends TestBase {
         }
         app.getNavigationHelper().gotoContactPage();
         List<ContactData> before = app.getContactHelper().getContactList();
-        app.getContactHelper().selectContact(before.size() - 2); //-2, т.к. считается в том числе название столбца
+        app.getContactHelper().selectContact(before.size() - 1); 
         app.getContactHelper().modifyContact();
         app.getContactHelper().fillContactForm(new ContactData("test2","test2","test2","test2", null), false);
         app.getContactHelper().submitContactModification();

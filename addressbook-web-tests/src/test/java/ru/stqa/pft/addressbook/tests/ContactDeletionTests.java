@@ -15,7 +15,7 @@ public class ContactDeletionTests extends TestBase {
         }
         app.getNavigationHelper().gotoContactPage();
         List<ContactData> before = app.getContactHelper().getContactList();
-        app.getContactHelper().selectContact(before.size() - 2); //-2, т.к. считается в том числе название столбца
+        app.getContactHelper().selectContact(before.size() - 1);
         app.getContactHelper().deleteSelectedContacts();
         app.alert();
         app.getNavigationHelper().gotoContactPage();
