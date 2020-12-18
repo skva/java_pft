@@ -15,14 +15,14 @@ public class ContactModificationTests extends TestBase {
         if (! app.getContactHelper().isThereAContact()) {
             app.getContactHelper().createContact(new ContactData("test1","test1","test1","test1","test1"), true);
         }
-        app.getNavigationHelper().gotoContactPage();
+        app.goTo().gotoContactPage();
         List<ContactData> before = app.getContactHelper().getContactList();
         app.getContactHelper().selectContact(before.size() - 1);
         app.getContactHelper().modifyContact(before.size());
         ContactData contact = new ContactData(before.get(before.size() - 1).getId(),"test2","test2","test2","test2", null);
         app.getContactHelper().fillContactForm(contact, false);
         app.getContactHelper().submitContactModification();
-        app.getNavigationHelper().gotoContactPage();
+        app.goTo().gotoContactPage();
         List<ContactData> after = app.getContactHelper().getContactList();
         Assert.assertEquals(after.size(), before.size());
 
