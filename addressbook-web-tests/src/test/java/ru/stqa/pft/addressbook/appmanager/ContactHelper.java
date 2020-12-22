@@ -16,6 +16,18 @@ public class ContactHelper extends HelperBase{
         super(wd);
     }
 
+    public void returnToContactPage() {
+        click(By.linkText("home"));
+    }
+
+    public void modifyContact(List<ContactData> before, int index, ContactData contact) {
+        selectContact(index);
+        modifyContact(before.size());
+        fillContactForm(contact, false);
+        submitContactModification();
+        returnToContactPage();
+    }
+
     public void submitContactCreation() {
         click(By.name("submit"));
     }
