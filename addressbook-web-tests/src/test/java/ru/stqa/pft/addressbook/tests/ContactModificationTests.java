@@ -13,19 +13,19 @@ public class ContactModificationTests extends TestBase {
 
     @BeforeMethod
     public void ensurePreconditions() {
-        if (!app.getContactHelper().isThereAContact()) {
-            app.getContactHelper().createContact(new ContactData("test1", "test1", "test1", "test1", "test1"), true);
+        if (app.contact().list().size() == 0) {
+            app.contact().create(new ContactData("test1", "test1", "test1", "test1", "test1"), true);
         }
     }
 
     @Test
     public void testContactModification() throws Exception {
-        app.goTo().gotoContactPage();
-        List<ContactData> before = app.getContactHelper().getContactList();
+        app.goTo().contactPage();
+        List<ContactData> before = app.contact().list();
         int index = before.size() - 1;
         ContactData contact = new ContactData(before.get(index).getId(), "test2", "test2", "test2", "test2", null);
-        app.getContactHelper().modifyContact(before, index, contact);
-        List<ContactData> after = app.getContactHelper().getContactList();
+        app.contact().modify(before, index, contact);
+        List<ContactData> after = app.contact().list();
         Assert.assertEquals(after.size(), before.size());
 
         //удаляем из списка последний элемент и добавляем тот, который добавили

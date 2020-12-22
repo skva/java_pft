@@ -13,7 +13,6 @@ import java.util.concurrent.TimeUnit;
 public class ApplicationManager {
     WebDriver wd;
 
-
     private SessionHelper sessionHelper;
     private NavigationHelper navigationHelper;
     private GroupHelper groupHelper;
@@ -66,6 +65,6 @@ public class ApplicationManager {
         return navigationHelper;
     }
 
-    public ContactHelper getContactHelper() {
+    public ContactHelper contact() {
         return contactHelper; }
 }
