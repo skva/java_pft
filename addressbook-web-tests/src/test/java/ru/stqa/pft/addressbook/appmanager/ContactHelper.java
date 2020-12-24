@@ -99,7 +99,7 @@ public class ContactHelper extends HelperBase{
         return contacts;
     }
 
-    //задублировал этот метод из ApplicationManager для delete(). Не знаю, как сослаться на него в другом классе
+    //задублировал этот метод из ApplicationManager для метода delete(). Не знаю, как сослаться на него в другом классе
     public void alert() {
         wd.switchTo().alert().accept();
     }
