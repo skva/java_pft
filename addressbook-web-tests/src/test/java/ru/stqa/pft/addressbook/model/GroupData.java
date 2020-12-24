@@ -6,9 +6,6 @@ public class GroupData {
     private String header;
     private String footer;
 
-    public int getId() {
-         return id;
-    }
 
     @Override
     public boolean equals(Object o) {
@@ -26,6 +23,10 @@ public class GroupData {
         int result = id;
         result = 31 * result + (name != null ? name.hashCode() : 0);
         return result;
+    }
+
+    public int getId() {
+        return id;
     }
 
     public GroupData withId(int id) {
