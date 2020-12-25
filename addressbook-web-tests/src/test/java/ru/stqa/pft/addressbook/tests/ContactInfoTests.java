@@ -18,6 +18,7 @@ public class ContactInfoTests extends TestBase{
         ContactData contactInfoFromEditForm = app.contact().infoFromEditForm(contact);
 
         assertThat(contact.getAllEmails(), equalTo(mergeEmails(contactInfoFromEditForm)));
+        assertThat(contact.getAddress(), equalTo(contactInfoFromEditForm.getAddress()));
     }
 
     private String mergeEmails(ContactData contact) {

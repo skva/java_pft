@@ -99,9 +99,12 @@ public class ContactHelper extends HelperBase{
 
             String allEmails = element.findElement(By.xpath(".//td[5]")).getText();
 
+            String address = element.findElement(By.xpath(".//td[4]")).getText();
+
             contacts.add(new ContactData().withId(id).withFirstname(firstname).withLastname(lastname)
                     .withAllPhones(allPhones)
-                    .withAllEmails(allEmails));
+                    .withAllEmails(allEmails)
+                    .withAddress(address));
         }
         return contacts;
     }
@@ -118,10 +121,13 @@ public class ContactHelper extends HelperBase{
         String email2 = wd.findElement(By.name("email2")).getAttribute("value");
         String email3 = wd.findElement(By.name("email3")).getAttribute("value");
 
+        String address = wd.findElement(By.name("address")).getAttribute("value");
+
         wd.navigate().back();
         return new ContactData().withId(contact.getId()).withFirstname(firstname).withLastname(lastname)
                 .withHomePhone(home).withMobilePhone(mobile).withWorkPhone(work)
-                .withEmail(email).withEmail2(email2).withEmail3(email3);
+                .withEmail(email).withEmail2(email2).withEmail3(email3)
+                .withAddress(address);
     }
 
     private void initContactModificationById(int id) {
