@@ -23,3 +23,5 @@ public class ContactCreationTests extends TestBase{
             before.withAdded(contact.withId(after.stream().mapToInt((g) -> g.getId()).max().getAsInt()))));
   }
 }
+
+//test revert
