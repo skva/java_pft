@@ -24,4 +24,3 @@ public class ContactCreationTests extends TestBase{
   }
 }
 
-//test revert
