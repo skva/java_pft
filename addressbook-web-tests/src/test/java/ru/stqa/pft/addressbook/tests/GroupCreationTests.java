@@ -8,7 +8,9 @@ import org.testng.annotations.Test;
 import ru.stqa.pft.addressbook.model.GroupData;
 import ru.stqa.pft.addressbook.model.Groups;
 
-import java.io.*;
+import java.io.BufferedReader;
+import java.io.FileReader;
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
@@ -64,14 +66,14 @@ public class GroupCreationTests extends TestBase{
             before.withAdded(group.withId(after.stream().mapToInt((g) -> g.getId()).max().getAsInt()))));
   }
 
-  //@Test
-  //public void testBadGroupCreation() throws Exception {
-  //  app.goTo().groupPage();
-  //   Groups before = app.group().all();
-  //  GroupData group = new GroupData().withName("test2'");
-  //  app.group().createGroup(group);
-  //  assertThat(app.group().count(), equalTo(before.size()));
-  //  Groups after = app.group().all();
-  //  assertThat(after, equalTo(before));
-  //}
+  @Test
+  public void testBadGroupCreation() throws Exception {
+    app.goTo().groupPage();
+     Groups before = app.group().all();
+    GroupData group = new GroupData().withName("test2'");
+    app.group().createGroup(group);
+    assertThat(app.group().count(), equalTo(before.size()));
+    Groups after = app.group().all();
+    assertThat(after, equalTo(before));
+  }
 }
