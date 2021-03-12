@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="ru.stqa.pft.addressbook.tests.ContactCreationTests" tests="2" skipped="0" failures="0" errors="0" timestamp="2021-03-12T13:04:08" hostname="406PC0044" time="2.881">
+  <properties/>
+  <testcase name="testContactCreation" classname="ru.stqa.pft.addressbook.tests.ContactCreationTests" time="2.876"/>
+  <testcase name="testCurrentDir" classname="ru.stqa.pft.addressbook.tests.ContactCreationTests" time="0.005"/>
+  <system-out><![CDATA[C:\Edu\Selenium\java_pft\addressbook-web-tests\.
+C:\Edu\Selenium\java_pft\addressbook-web-tests\src\test\resources\1.png
+true
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
