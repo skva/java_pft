@@ -5,13 +5,8 @@
     "footer": "footer 0"
   },
   {
-    "name": "groupnametest 1",
+    "name": "groupnametest 0",
     "header": "header 1",
     "footer": "footer 1"
-  },
-  {
-    "name": "groupnametest 2",
-    "header": "header 2",
-    "footer": "footer 2"
   }
 ]
