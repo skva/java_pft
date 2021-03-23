@@ -2,6 +2,7 @@ package ru.stqa.pft.addressbook.model;
 
 import com.google.gson.annotations.Expose;
 import com.thoughtworks.xstream.annotations.XStreamOmitField;
+import org.hibernate.annotations.Type;
 
 import javax.persistence.*;
 import java.io.File;
@@ -32,35 +33,46 @@ public class ContactData {
 
     @Expose
     @Column(name = "home")
+    @Type(type = "text")
     private String homePhone;
     @Expose
     @Column(name = "mobile")
+    @Type(type = "text")
     private String mobilePhone;
     @Expose
     @Column(name = "work")
+    @Type(type = "text")
     private String workPhone;
+    @Transient
     private String allPhones;
 
     @Expose
+    @Transient
     private String email;
     @Expose
+    @Transient
     private String email2;
     @Expose
+    @Transient
     private String email3;
+    @Transient
     private String allEmails;
 
     @Expose
+    @Column(name = "address")
+    @Type(type = "text")
     private String address;
 
     @Column(name = "photo")
-    private File photo;
+    @Type(type = "text")
+    private String photo;
 
     public File getPhoto() {
-        return photo;
+        return new File(photo);
     }
 
     public ContactData withPhoto(File photo) {
-        this.photo = photo;
+        this.photo = photo.getPath();
         return this;
     }
 
