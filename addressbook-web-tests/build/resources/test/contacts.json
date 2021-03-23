@@ -1,0 +1,22 @@
+[
+  {
+    "firstname": "firstnametest 0",
+    "middlename": "middlenametest 0",
+    "lastname": "lastnametest 0",
+    "nickname": "nicknametest 0",
+    "group": "groupnametest 0",
+    "homePhone": "homephone 0",
+    "mobilePhone": "moblieephone 0",
+    "workPhone": "workphone 0"
+  },
+  {
+    "firstname": "firstnametest 1",
+    "middlename": "middlenametest 1",
+    "lastname": "lastnametest 1",
+    "nickname": "nicknametest 1",
+    "group": "groupnametest 0",
+    "homePhone": "homephone 1",
+    "mobilePhone": "moblieephone 1",
+    "workPhone": "workphone 1"
+  }
+]

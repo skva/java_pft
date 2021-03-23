@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="ru.stqa.pft.addressbook.tests.ContactModificationTests" tests="1" skipped="1" failures="0" errors="0" timestamp="2021-03-23T11:04:21" hostname="406PC0044" time="0.0">
+  <properties/>
+  <testcase name="testContactModification" classname="ru.stqa.pft.addressbook.tests.ContactModificationTests" time="0.0">
+    <skipped/>
+  </testcase>
+  <system-out><![CDATA[15:04:21.903 [Test worker] INFO  r.s.pft.addressbook.tests.TestBase - Stop test testContactModification
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
