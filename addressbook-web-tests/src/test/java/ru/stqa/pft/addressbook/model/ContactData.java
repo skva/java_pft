@@ -3,27 +3,41 @@ package ru.stqa.pft.addressbook.model;
 import com.google.gson.annotations.Expose;
 import com.thoughtworks.xstream.annotations.XStreamOmitField;
 
+import javax.persistence.*;
 import java.io.File;
 
+@Entity
+@Table(name = "addressbook")
 public class ContactData {
+
     @XStreamOmitField
+    @Id
+    @Column(name = "id")
     private int id = Integer.MAX_VALUE;
+
     @Expose
+    @Column(name = "firstname")
     private String firstname;
     @Expose
+    @Column(name = "middlename")
     private String middlename;
     @Expose
+    @Column(name = "lastname")
     private String lastname;
     @Expose
     private String nickname;
     @Expose
+    @Transient
     private String group;
 
     @Expose
+    @Column(name = "home")
     private String homePhone;
     @Expose
+    @Column(name = "mobile")
     private String mobilePhone;
     @Expose
+    @Column(name = "work")
     private String workPhone;
     private String allPhones;
 
@@ -38,6 +52,7 @@ public class ContactData {
     @Expose
     private String address;
 
+    @Column(name = "photo")
     private File photo;
 
     public File getPhoto() {
